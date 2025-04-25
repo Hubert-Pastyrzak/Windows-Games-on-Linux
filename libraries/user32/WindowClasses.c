@@ -421,6 +421,7 @@ void unlockWindowClassesMutex() {
 
 
 
+//Retrieves information about a window class.
 BOOL WINAPI GetClassInfoA(HINSTANCE hInstance, LPCSTR lpClassName, LPWNDCLASSA lpWndClass) {
   systemClasses();
 
@@ -443,6 +444,7 @@ BOOL WINAPI GetClassInfoA(HINSTANCE hInstance, LPCSTR lpClassName, LPWNDCLASSA l
   return 1;
 }
 
+//Retrieves information about a window class.
 BOOL WINAPI GetClassInfoW(HINSTANCE hInstance, LPCWSTR lpClassName, LPWNDCLASSW lpWndClass) {
   systemClasses();
 
@@ -451,6 +453,7 @@ BOOL WINAPI GetClassInfoW(HINSTANCE hInstance, LPCWSTR lpClassName, LPWNDCLASSW 
   return 0;
 }
 
+//Retrieves information about a window class, including a handle to the small icon associated with the window class. The GetClassInfo function does not retrieve a handle to the small icon.
 BOOL WINAPI GetClassInfoExA(HINSTANCE hInstance, LPCSTR lpszClass, LPWNDCLASSEXA lpwcx) {
   systemClasses();
 
@@ -477,6 +480,7 @@ BOOL WINAPI GetClassInfoExA(HINSTANCE hInstance, LPCSTR lpszClass, LPWNDCLASSEXA
   return 0;
 }
 
+//Retrieves information about a window class, including a handle to the small icon associated with the window class. The GetClassInfo function does not retrieve a handle to the small icon.
 BOOL WINAPI GetClassInfoExW(HINSTANCE hInstance, LPCWSTR lpszClass, LPWNDCLASSEXW lpwcx) {
   systemClasses();
 
@@ -484,6 +488,7 @@ BOOL WINAPI GetClassInfoExW(HINSTANCE hInstance, LPCWSTR lpszClass, LPWNDCLASSEX
   return 0;
 }
 
+//Retrieves the specified 32-bit (DWORD) value from the WNDCLASSEX structure associated with the specified window.
 DWORD WINAPI GetClassLongA(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -498,6 +503,7 @@ DWORD WINAPI GetClassLongA(HWND hWnd, int nIndex) {
   return (DWORD)GetClassLongPtrA(hWnd, nIndex);
 }
 
+//Retrieves the specified 32-bit (DWORD) value from the WNDCLASSEX structure associated with the specified window.
 DWORD WINAPI GetClassLongW(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -505,6 +511,7 @@ DWORD WINAPI GetClassLongW(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves the specified value from the WNDCLASSEX structure associated with the specified window.
 ULONG_PTR WINAPI GetClassLongPtrA(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -565,6 +572,7 @@ ULONG_PTR WINAPI GetClassLongPtrA(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves the specified value from the WNDCLASSEX structure associated with the specified window.
 ULONG_PTR WINAPI GetClassLongPtrW(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -572,6 +580,7 @@ ULONG_PTR WINAPI GetClassLongPtrW(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves the name of the class to which the specified window belongs.
 int WINAPI GetClassNameA(HWND hWnd, LPSTR lpClassName, int nMaxCount) {
   systemClasses();
 
@@ -595,6 +604,7 @@ int WINAPI GetClassNameA(HWND hWnd, LPSTR lpClassName, int nMaxCount) {
   return outLength;
 }
 
+//Retrieves the name of the class to which the specified window belongs.
 int WINAPI GetClassNameW(HWND hWnd, LPWSTR lpClassName, int nMaxCount) {
   systemClasses();
 
@@ -602,6 +612,7 @@ int WINAPI GetClassNameW(HWND hWnd, LPWSTR lpClassName, int nMaxCount) {
   return 0;
 }
 
+//Retrieves the 16-bit (WORD) value at the specified offset into the extra class memory for the window class to which the specified window belongs.
 WORD WINAPI GetClassWord(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -621,6 +632,7 @@ WORD WINAPI GetClassWord(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves information about the specified window. The function also retrieves the 32-bit (DWORD) value at the specified offset into the extra window memory.
 LONG WINAPI GetWindowLongA(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -633,6 +645,7 @@ LONG WINAPI GetWindowLongA(HWND hWnd, int nIndex) {
   return GetWindowLongPtrA(hWnd, nIndex);
 }
 
+//Retrieves information about the specified window. The function also retrieves the 32-bit (DWORD) value at the specified offset into the extra window memory.
 LONG WINAPI GetWindowLongW(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -640,6 +653,7 @@ LONG WINAPI GetWindowLongW(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves information about the specified window. The function also retrieves the value at a specified offset into the extra window memory.
 LONG_PTR WINAPI GetWindowLongPtrA(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -685,6 +699,7 @@ LONG_PTR WINAPI GetWindowLongPtrA(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Retrieves information about the specified window. The function also retrieves the value at a specified offset into the extra window memory.
 LONG_PTR WINAPI GetWindowLongPtrW(HWND hWnd, int nIndex) {
   systemClasses();
 
@@ -692,6 +707,7 @@ LONG_PTR WINAPI GetWindowLongPtrW(HWND hWnd, int nIndex) {
   return 0;
 }
 
+//Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function.
 ATOM WINAPI RegisterClassA(const WNDCLASSA* lpWndClass) {
   systemClasses();
 
@@ -715,6 +731,7 @@ ATOM WINAPI RegisterClassA(const WNDCLASSA* lpWndClass) {
   return RegisterClassExA(&wcx);
 }
 
+//Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function.
 ATOM WINAPI RegisterClassW(const WNDCLASSW* lpWndClass) {
   systemClasses();
 
@@ -722,6 +739,7 @@ ATOM WINAPI RegisterClassW(const WNDCLASSW* lpWndClass) {
   return 0;
 }
 
+//Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function.
 ATOM WINAPI RegisterClassExA(const WNDCLASSEXA* lpwcx) {
   systemClasses();
 
@@ -769,6 +787,7 @@ ATOM WINAPI RegisterClassExA(const WNDCLASSEXA* lpwcx) {
   //TODO: Trzeba zobaczyć, co robią pozostałe style klas i je obsłużyć
 }
 
+//Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function.
 ATOM WINAPI RegisterClassExW(const WNDCLASSEXW* lpwcx) {
   systemClasses();
 
@@ -776,6 +795,7 @@ ATOM WINAPI RegisterClassExW(const WNDCLASSEXW* lpwcx) {
   return 0;
 }
 
+//Replaces the specified 32-bit (long) value at the specified offset into the extra class memory or the WNDCLASSEX structure for the class to which the specified window belongs.
 DWORD WINAPI SetClassLongA(HWND hWnd, int nIndex, LONG dwNewLong) {
   systemClasses();
 
@@ -793,6 +813,7 @@ DWORD WINAPI SetClassLongA(HWND hWnd, int nIndex, LONG dwNewLong) {
   return SetClassLongPtrA(hWnd, nIndex, (ULONG)dwNewLong);
 }
 
+//Replaces the specified 32-bit (long) value at the specified offset into the extra class memory or the WNDCLASSEX structure for the class to which the specified window belongs.
 DWORD WINAPI SetClassLongW(HWND hWnd, int nIndex, LONG dwNewLong) {
   systemClasses();
 
@@ -800,6 +821,7 @@ DWORD WINAPI SetClassLongW(HWND hWnd, int nIndex, LONG dwNewLong) {
   return 0;
 }
 
+//Replaces the specified value at the specified offset in the extra class memory or the WNDCLASSEX structure for the class to which the specified window belongs.
 ULONG_PTR WINAPI SetClassLongPtrA(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   systemClasses();
 
@@ -871,6 +893,7 @@ ULONG_PTR WINAPI SetClassLongPtrA(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   return 0;
 }
 
+//Replaces the specified value at the specified offset in the extra class memory or the WNDCLASSEX structure for the class to which the specified window belongs.
 ULONG_PTR WINAPI SetClassLongPtrW(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   systemClasses();
 
@@ -878,6 +901,7 @@ ULONG_PTR WINAPI SetClassLongPtrW(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   return 0;
 }
 
+//Replaces the 16-bit (WORD) value at the specified offset into the extra class memory for the window class to which the specified window belongs.
 WORD WINAPI SetClassWord(HWND hWnd, int nIndex, WORD wNewWord) {
   systemClasses();
 
@@ -895,6 +919,7 @@ WORD WINAPI SetClassWord(HWND hWnd, int nIndex, WORD wNewWord) {
   return 0;
 }
 
+//Changes an attribute of the specified window. The function also sets the 32-bit (long) value at the specified offset into the extra window memory.
 LONG WINAPI SetWindowLongA(HWND hWnd, int nIndex, LONG dwNewLong) {
   systemClasses();
 
@@ -913,6 +938,7 @@ LONG WINAPI SetWindowLongA(HWND hWnd, int nIndex, LONG dwNewLong) {
   return SetWindowLongPtrA(hWnd, nIndex, (ULONG)dwNewLong);
 }
 
+//Changes an attribute of the specified window. The function also sets the 32-bit (long) value at the specified offset into the extra window memory.
 LONG WINAPI SetWindowLongW(HWND hWnd, int nIndex, LONG dwNewLong) {
   systemClasses();
 
@@ -920,6 +946,7 @@ LONG WINAPI SetWindowLongW(HWND hWnd, int nIndex, LONG dwNewLong) {
   return 0;
 }
 
+//Changes an attribute of the specified window. The function also sets a value at the specified offset in the extra window memory. 
 LONG_PTR WINAPI SetWindowLongPtrA(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   systemClasses();
 
@@ -980,6 +1007,7 @@ LONG_PTR WINAPI SetWindowLongPtrA(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   return 0;
 }
 
+//Changes an attribute of the specified window. The function also sets a value at the specified offset in the extra window memory. 
 LONG_PTR WINAPI SetWindowLongPtrW(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   systemClasses();
 
@@ -987,6 +1015,7 @@ LONG_PTR WINAPI SetWindowLongPtrW(HWND hWnd, int nIndex, LONG_PTR dwNewLong) {
   return 0;
 }
 
+//Unregisters a window class, freeing the memory required for the class.
 BOOL WINAPI UnregisterClassA(LPCSTR lpClassName, HINSTANCE hInstance) {
   systemClasses();
 
@@ -1012,6 +1041,7 @@ BOOL WINAPI UnregisterClassA(LPCSTR lpClassName, HINSTANCE hInstance) {
   return 0;
 }
 
+//Unregisters a window class, freeing the memory required for the class.
 BOOL WINAPI UnregisterClassW(LPCWSTR lpClassName, HINSTANCE hInstance) {
   systemClasses();
 
